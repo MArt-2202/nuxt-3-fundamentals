@@ -1,0 +1,20 @@
+<script setup>
+
+</script>
+
+<template>
+	<MovieSearch />
+</template>
+
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+</style>
