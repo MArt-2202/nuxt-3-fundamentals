@@ -21,7 +21,7 @@ search();
 		<ul v-if="movies.length" class="movies">
 			<li v-for="movie in movies" :key="movie.imdbID">
 				<NuxtLink :to="{ name: 'movies-id', params: { id: movie.imdbID } }">
-					<img :src="movie.Poster" :alt="movie.Title">
+					<NuxtImg :src="movie.Poster" :alt="movie.Title" width="300" fit="cover" format="webp" loading="lazy" />
 				</NuxtLink>
 			</li>
 		</ul>
@@ -34,5 +34,10 @@ search();
 	grid-template-columns: repeat(4, 1fr);
 	gap: 10px;
 	list-style: none;
+}
+
+.movies a {
+	display: block;
+	height: 100%;
 }
 </style>
